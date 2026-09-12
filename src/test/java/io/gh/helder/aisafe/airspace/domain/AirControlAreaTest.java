@@ -1,9 +1,10 @@
 package io.gh.helder.aisafe.airspace.domain;
 
-import java.math.BigDecimal;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+
+import java.math.BigDecimal;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -142,7 +143,7 @@ class AirControlAreaTest {
             var other = area("OVL", "Overlapping", "40", "50", "5", "15");
 
             assertThat(europe().overlaps(other)).isTrue();
-            assertThat(other.overlaps(europe())).isTrue(); 
+            assertThat(other.overlaps(europe())).isTrue();
         }
 
         @Test
