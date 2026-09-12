@@ -4,9 +4,10 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Objects;
 
-import io.gh.helder.aisafe.common.domain.Coordinates;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
+
+import io.gh.helder.aisafe.common.domain.Coordinates;
 
 @Embeddable
 public record BoundingBox(

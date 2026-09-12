@@ -3,6 +3,8 @@ package io.gh.helder.aisafe.airspace.web;
 import java.math.BigDecimal;
 import java.net.URI;
 
+import jakarta.validation.Valid;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -19,7 +21,6 @@ import io.gh.helder.aisafe.airspace.service.AirControlAreaService;
 import io.gh.helder.aisafe.airspace.web.dto.AreaResponse;
 import io.gh.helder.aisafe.airspace.web.dto.CreateAreaRequest;
 import io.gh.helder.aisafe.common.domain.Coordinates;
-import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/air-control-areas")

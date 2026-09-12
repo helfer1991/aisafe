@@ -2,6 +2,8 @@ package io.gh.helder.aisafe.catalog.web;
 
 import java.net.URI;
 
+import jakarta.validation.Valid;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -16,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import io.gh.helder.aisafe.catalog.service.AirportService;
 import io.gh.helder.aisafe.catalog.web.dto.AirportResponse;
 import io.gh.helder.aisafe.catalog.web.dto.CreateAirportRequest;
-import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/airports")

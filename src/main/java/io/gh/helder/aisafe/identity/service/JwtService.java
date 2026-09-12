@@ -52,7 +52,7 @@ public class JwtService {
                     .parseSignedClaims(token)
                     .getPayload());
         } catch (JwtException | IllegalArgumentException e) {
-            return Optional.empty();  
+            return Optional.empty();
         }
     }
 

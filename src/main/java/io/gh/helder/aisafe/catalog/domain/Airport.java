@@ -4,8 +4,6 @@ import java.time.Instant;
 import java.util.Objects;
 import java.util.UUID;
 
-import io.gh.helder.aisafe.airspace.domain.AirControlArea;
-import io.gh.helder.aisafe.common.domain.Coordinates;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -15,6 +13,9 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Version;
+
+import io.gh.helder.aisafe.airspace.domain.AirControlArea;
+import io.gh.helder.aisafe.common.domain.Coordinates;
 
 @Entity
 @Table(name = "airports")

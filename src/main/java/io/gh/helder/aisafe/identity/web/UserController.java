@@ -3,6 +3,8 @@ package io.gh.helder.aisafe.identity.web;
 import java.net.URI;
 import java.util.UUID;
 
+import jakarta.validation.Valid;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -17,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 import io.gh.helder.aisafe.identity.service.UserService;
 import io.gh.helder.aisafe.identity.web.dto.CreateUserRequest;
 import io.gh.helder.aisafe.identity.web.dto.UserResponse;
-import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/users")

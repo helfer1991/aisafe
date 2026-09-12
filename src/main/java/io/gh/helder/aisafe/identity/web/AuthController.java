@@ -1,5 +1,7 @@
 package io.gh.helder.aisafe.identity.web;
 
+import jakarta.validation.Valid;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,7 +12,6 @@ import io.gh.helder.aisafe.identity.service.AuthService;
 import io.gh.helder.aisafe.identity.web.dto.LoginRequest;
 import io.gh.helder.aisafe.identity.web.dto.RefreshRequest;
 import io.gh.helder.aisafe.identity.web.dto.TokenPair;
-import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/auth")

@@ -3,7 +3,6 @@ package io.gh.helder.aisafe.identity.web.dto;
 import java.time.LocalDate;
 import java.util.Set;
 
-import io.gh.helder.aisafe.identity.domain.Role;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
@@ -11,6 +10,8 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
+
+import io.gh.helder.aisafe.identity.domain.Role;
 
 public record CreateUserRequest(
         @NotBlank @jakarta.validation.constraints.Email String email,

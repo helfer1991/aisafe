@@ -1,15 +1,5 @@
 package io.gh.helder.aisafe.identity.service;
 
-import io.gh.helder.aisafe.identity.config.JwtProperties;
-import io.gh.helder.aisafe.identity.domain.*;
-import io.gh.helder.aisafe.identity.repository.RefreshTokenRepository;
-import io.gh.helder.aisafe.identity.repository.UserRepository;
-import io.gh.helder.aisafe.identity.web.dto.LoginRequest;
-import io.gh.helder.aisafe.identity.web.dto.TokenPair;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -17,6 +7,17 @@ import java.security.SecureRandom;
 import java.time.Instant;
 import java.util.Base64;
 import java.util.HexFormat;
+
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import io.gh.helder.aisafe.identity.config.JwtProperties;
+import io.gh.helder.aisafe.identity.domain.*;
+import io.gh.helder.aisafe.identity.repository.RefreshTokenRepository;
+import io.gh.helder.aisafe.identity.repository.UserRepository;
+import io.gh.helder.aisafe.identity.web.dto.LoginRequest;
+import io.gh.helder.aisafe.identity.web.dto.TokenPair;
 
 @Service
 @Transactional
@@ -74,7 +75,7 @@ public class AuthService {
             throw new AccountUnavailableException("Account is no longer able to authenticate");
         }
 
-        stored.revoke();    
+        stored.revoke();
         return issueFor(user);
     }
 
